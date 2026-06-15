@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com" xmlns:fx="http://javafx.com" fx:controller="com.example.converterfx.HelloController" prefWidth="420.0" prefHeight="340.0" style="-fx-background-color: linear-gradient(to bottom right, #1f1a16, #120e0b); -fx-border-color: #524339; -fx-border-width: 1px; -fx-border-radius: 12px; -fx-background-radius: 12px;">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+
+    <Label text="КОНВЕРТЕР СТАВОК И ВЕРОЯТНОСТЕЙ" style="-fx-text-fill: linear-gradient(to right, #ff9900, #ff5500); -fx-font-weight: bold; -fx-font-size: 16px; -fx-font-family: 'Segoe UI', Helvetica, sans-serif; -fx-effect: dropshadow(three-pass-box, rgba(255,153,0,0.3), 10, 0, 0, 0);" />
+
+    <HBox spacing="15.0" alignment="CENTER">
+        <VBox spacing="6.0">
+            <Label text="Из:" style="-fx-text-fill: #ccbba1; -fx-font-size: 12px; -fx-font-weight: bold;" />
+            <ComboBox fx:id="fromCombo" prefWidth="160.0" style="-fx-background-color: #2e251f; -fx-text-fill: white; -fx-background-radius: 6px; -fx-border-color: #524339; -fx-border-radius: 6px; -fx-font-size: 13px;" />
+        </VBox>
+        <VBox spacing="6.0">
+            <Label text="В:" style="-fx-text-fill: #ccbba1; -fx-font-size: 12px; -fx-font-weight: bold;" />
+            <ComboBox fx:id="toCombo" prefWidth="160.0" style="-fx-background-color: #2e251f; -fx-text-fill: white; -fx-background-radius: 6px; -fx-border-color: #524339; -fx-border-radius: 6px; -fx-font-size: 13px;" />
+        </VBox>
+    </HBox>
+
+    <VBox spacing="6.0" alignment="CENTER_LEFT" fillWidth="false">
+        <Label text="Значение для конвертации:" style="-fx-text-fill: #ccbba1; -fx-font-size: 12px; -fx-font-weight: bold;" />
+        <TextField fx:id="inputField" prefWidth="335.0" promptText="Например: 2.0, 50% или 3/4" style="-fx-background-color: #241e1a; -fx-text-fill: #ff9900; -fx-prompt-text-fill: #736154; -fx-background-radius: 6px; -fx-border-color: #524339; -fx-border-radius: 6px; -fx-padding: 8px; -fx-font-size: 14px;" />
+    </VBox>
+
+    <Button fx:id="convertButton" text="КОНВЕРТИРОВАТЬ" onAction="#handleConvert" prefWidth="335.0" style="-fx-background-color: linear-gradient(to right, #ff9900, #ff5500); -fx-text-fill: #120e0b; -fx-background-radius: 6px; -fx-font-weight: bold; -fx-font-size: 13px; -fx-cursor: hand; -fx-padding: 10px;" />
+
+    <VBox alignment="CENTER" prefWidth="335.0" style="-fx-background-color: #1a1512; -fx-background-radius: 8px; -fx-padding: 12px; -fx-border-color: #2e251f; -fx-border-radius: 8px;">
+        <Label fx:id="resultLabel" text="Результат появится здесь" textAlignment="CENTER" wrapText="true" style="-fx-text-fill: #ccbba1; -fx-font-size: 14px; -fx-font-weight: bold;" />
+    </VBox>
+</VBox>
